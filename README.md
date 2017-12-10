@@ -23,13 +23,13 @@ By default, npm installs packages in the `node_modules` folder.
 
 Important npm packages are usually not committed to source control. If you cloned the repository containing the final source code and want to restore the npm packages, open a command-line prompt in the `simple-oidc-client` folder and run `npm install` to restore packages.
 
-We also create a basic index.html and a popup.html file.
+We also create a basic `index.html` and a `popup.html` file.
 
 We have two HTML files because oidc-client can open a popup to show the login form to the user.
 
 ## Simple OIDC Client - authentication
 
-Now that we have everything we need, we can configure our login settings in configuration.js.
+Now that we have everything we need, we can configure our login settings in `configuration.js`.
 
 ```
 var settings = {
