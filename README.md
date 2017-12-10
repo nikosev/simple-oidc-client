@@ -76,7 +76,7 @@ var settings = {
     title: 'Create Tokens',
     authority: 'https://localhost:8080',
     client_id: 'client',
-    popup_redirect_uri: 'http://localhost:8080/popup.html',
+    popup_redirect_uri: 'http://localhost/simple-oidc-client/popup.html',
 	
     response_type: 'id_token',
     scope: 'openid profile',
