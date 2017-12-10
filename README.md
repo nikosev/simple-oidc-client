@@ -55,7 +55,6 @@ Install Apache and Node.js
 sudo apt-get update
 sudo apt-get install apache2
 sudo apt-get install nodejs
-sudo apt-get install npm
 ```
 
 Download the file from releases and extract it in apache home directory
