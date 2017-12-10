@@ -11,7 +11,7 @@ Bootstrap
 oidc-client-js
 ```
 
-We are going to install them with npm, the Node.js front-end package manager. If you don’t have npm installed, you can follow these instructions on the npm website. Once npm is installed, open a command-line prompt in the *simple-oidc-client* folder:
+We are going to install them with npm, the Node.js front-end package manager. If you don’t have npm installed, you can follow these instructions on the npm website. Once npm is installed, open a command-line prompt in the `simple-oidc-client` folder:
 
 ```
 $ npm install jquery
@@ -19,9 +19,9 @@ $ npm install bootstrap
 $ npm install oidc-client
 ```
 
-By default, npm installs packages in the *node_modules* folder.
+By default, npm installs packages in the `node_modules` folder.
 
-Important npm packages are usually not committed to source control. If you cloned the repository containing the final source code and want to restore the npm packages, open a command-line prompt in the *simple-oidc-client* folder and run *npm install* to restore packages.
+Important npm packages are usually not committed to source control. If you cloned the repository containing the final source code and want to restore the npm packages, open a command-line prompt in the `simple-oidc-client` folder and run `npm install` to restore packages.
 
 We also create a basic index.html and a popup.html file.
 
