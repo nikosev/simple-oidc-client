@@ -3,6 +3,25 @@ A simple OpenID Connect (OIDC) client for browser-based JavaScript applications
 
 ## Simple OIDC Client - setup
 
+You can either clone repo from github or download the project from releases.
+
+### Clone repo
+
+First we need to install apache, node.js and npm
+
+```
+sudo apt-get update
+sudo apt-get install apache2
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
+Then open a terminal and clone the repo to this directory:
+
+```
+cd /var/www/html
+git clone https://github.com/rciam/simple-oidc-client.git
+```
+
 We use several third-party libraries to support our application:
 
 ```
@@ -11,12 +30,13 @@ Bootstrap
 oidc-client-js
 ```
 
-We are going to install them with npm, the Node.js front-end package manager. If you don’t have npm installed, you can follow these instructions on the npm website. Once npm is installed, open a command-line prompt in the `simple-oidc-client` folder:
+We are going to install them with npm, the Node.js front-end package manager. In the terminal move in the `simple-oidc-client` folder:
 
 ```
-$ npm install jquery
-$ npm install bootstrap
-$ npm install oidc-client
+cd simple-oidc-client
+npm install jquery
+npm install bootstrap
+npm install oidc-client
 ```
 
 By default, npm installs packages in the `node_modules` folder.
@@ -25,7 +45,27 @@ Important npm packages are usually not committed to source control. If you clone
 
 We also create a basic `index.html` and a `popup.html` file.
 
-We have two HTML files because oidc-client can open a popup to show the login form to the user.
+We have two HTML files because `oidc-client-js` can open a popup to show the login form to the user.
+
+### Download from releases
+
+Install Apache and Node.js
+
+```
+sudo apt-get update
+sudo apt-get install apache2
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
+
+Download the file from releases and extract it in apache home directory
+
+```
+cd /var/www/html
+//TODO: change url and file name
+wget releases.rar
+tar releases.rar
+```
 
 ## Simple OIDC Client - authentication
 
@@ -33,16 +73,16 @@ Now that we have everything we need, we can configure our login settings in `con
 
 ```
 var settings = {
-	title: 'Create Tokens',
-	authority: 'https://localhost:8080',
-	client_id: 'client',
-	popup_redirect_uri: 'http://localhost:8080/popup.html',
+    title: 'Create Tokens',
+    authority: 'https://localhost:8080',
+    client_id: 'client',
+    popup_redirect_uri: 'http://localhost:8080/popup.html',
 	
-	response_type: 'id_token',
-	scope: 'openid profile',
+    response_type: 'id_token',
+    scope: 'openid profile',
 	
-	debug: false,
-	filterProtocolClaims: true
+    debug: false,
+    filterProtocolClaims: true
 };
 ```
 
