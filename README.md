@@ -41,12 +41,7 @@ var settings = {
 	response_type: 'id_token',
 	scope: 'openid profile',
 	
-	accessTokenExpiringNotificationTime: 4,
-	automaticSilentRenew: true,
-	
-	//display user data
 	debug: false,
-	
 	filterProtocolClaims: true
 };
 ```
@@ -59,6 +54,7 @@ Let’s go quickly through the settings:
 * `popup_redirect_uri` is the redirect URL used when using the signinPopup method. If you prefer not having a popup and redirecting the user in the main window, you can use the redirect_uri property and the signinRedirect method
 * `response_type` defines in our case that we only expect an identity token back
 * `scope` defines the scopes the application asks for
+* `debug` displays user data
 * `filterProtocolClaims` indicates to oidc-client if it has to filter some OIDC protocol claims from the response: nonce, at_hash, iat, nbf, exp, aud, iss and idp
 	
 Source: https://identityserver.github.io/Documentation/docsv2/overview/jsGettingStarted.html
