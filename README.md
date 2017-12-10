@@ -77,6 +77,7 @@ var settings = {
     authority: 'https://localhost:8080',
     client_id: 'client',
     popup_redirect_uri: 'http://localhost/simple-oidc-client/popup.html',
+    post_logout_redirect_uri: 'http://localhost/simple-oidc-client/index.html',
 	
     response_type: 'id_token',
     scope: 'openid profile',
@@ -92,6 +93,7 @@ Let’s go quickly through the settings:
 * `authority` is the base URL of our IdentityServer instance. This will allow oidc-client to query the metadata endpoint so it can validate the tokens
 * `client_id` is the id of the client we want to use when hitting the authorization endpoint
 * `popup_redirect_uri` is the redirect URL used when using the signinPopup method. If you prefer not having a popup and redirecting the user in the main window, you can use the redirect_uri property and the signinRedirect method
+* `post_logout_redirect_uri` is the redirect URL used when using the signoutRedirect method
 * `response_type` defines in our case that we only expect an identity token back
 * `scope` defines the scopes the application asks for
 * `debug` displays user data
