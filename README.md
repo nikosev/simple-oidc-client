@@ -53,12 +53,12 @@ var settings = {
 
 Let’s go quickly through the settings:
 
-`title` is the title on the navigation bar
-`authority` is the base URL of our IdentityServer instance. This will allow oidc-client to query the metadata endpoint so it can validate the tokens
-`client_id` is the id of the client we want to use when hitting the authorization endpoint
-`popup_redirect_uri` is the redirect URL used when using the signinPopup method. If you prefer not having a popup and redirecting the user in the main window, you can use the redirect_uri property and the signinRedirect method
-`response_type` defines in our case that we only expect an identity token back
-`scope` defines the scopes the application asks for
-`filterProtocolClaims` indicates to oidc-client if it has to filter some OIDC protocol claims from the response: nonce, at_hash, iat, nbf, exp, aud, iss and idp
+* `title` is the title on the navigation bar
+* `authority` is the base URL of our IdentityServer instance. This will allow oidc-client to query the metadata endpoint so it can validate the tokens
+* `client_id` is the id of the client we want to use when hitting the authorization endpoint
+* `popup_redirect_uri` is the redirect URL used when using the signinPopup method. If you prefer not having a popup and redirecting the user in the main window, you can use the redirect_uri property and the signinRedirect method
+* `response_type` defines in our case that we only expect an identity token back
+* `scope` defines the scopes the application asks for
+* `filterProtocolClaims` indicates to oidc-client if it has to filter some OIDC protocol claims from the response: nonce, at_hash, iat, nbf, exp, aud, iss and idp
 	
 Source: https://identityserver.github.io/Documentation/docsv2/overview/jsGettingStarted.html
